@@ -1,0 +1,201 @@
+<!DOCTYPE HTML>
+<HTML lang="pt-br">
+	<HEAD>
+		<meta charset=utf-8>
+		<title> Sistema ProGuia  </title>
+		
+		
+		<!--Import Google Icon Font-->
+        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!---->
+		<link rel="stylesheet" type="text/css" href="../../css/materialize.css">
+		<link rel="stylesheet" type="text/css" href="../../css/custom.css">
+		
+		<!--<link rel="stylesheet" type="text/css" href="Style.css">-->
+		<script type="text/javascript" src="../../js/codigo.js"></script>
+		<script type="text/javascript" src="codigo.js"></script>
+		
+		
+		
+		
+	</HEAD>
+	<BODY onload="criarAbrirBanco()">
+		<div class="row " >
+		
+		
+			<div class="col s12 boxformulario">
+				<h5 class="center-align" > Cadastro de Cliente </h5>
+				<div class="row" >
+				
+				
+					<div class="input-field col s3">
+						<img class="materialboxed" id="logo" width="250" src="exemplo.jpg">
+					</div>
+
+					<div class="input-field col s3">
+						<i class="material-icons prefix">format_list_numbered</i>
+						<input disabled type="text" id="idCliente" placeholder="" ">	
+						<label for="idCliente"> Nº Cliente </label>
+					</div>
+					
+					
+					<div class="input-field col s3">
+						
+						<input data-length="50" class="uppercase" type="text" id="NumeroContrato" placeholder="Insira o Numero do Contrato">	
+						<label for="NumeroContrato"> Numero Contrato </label>
+					</div>
+					
+					<div class="input-field col s3">
+						
+						<input data-length="50" class="uppercase" type="text" id="RazaoSocial" placeholder="Insira a Razao Social">	
+						<label for="RazaoSocial"> Razao Social </label>
+					</div>					
+					
+					<div class="input-field col s3">
+						<input data-length="50" class="uppercase" type="text" id="NomeFantasia" placeholder="Insira o Nome Fantasia">	
+						<label for="NomeFantasia"> Nome Fantasia </label>
+					</div>
+					
+					<div id="listaCidade"   name="listaCidade"> </div>
+					
+					<div class="input-field col s3">
+						
+						<input data-length="50" class="uppercase" type="text" id="Endereco" placeholder="Insira o Endereço">	
+						<label for="Endereco"> Endereço </label>
+					</div>
+					
+					<div class="input-field col s3">
+						
+						<input data-length="50" class="uppercase" type="text" id="CpfCnpj" placeholder="Insira o Cpf/Cnpj">	
+						<label for="CpfCnpj"> Cpf/Cnpj </label>
+					</div>
+					
+					
+					<div class="input-field col s3">
+						
+						<input data-length="50" class="uppercase" type="text" id="IE" placeholder="Insira a IE">	
+						<label for="IE"> IE </label>
+					</div>
+					
+					
+					
+					<div class="input-field col s3">
+						
+						<input data-length="50" class="uppercase" type="text" id="Cep" placeholder="Insira o Cep">	
+						<label for="Cep"> Cep </label>
+					</div>
+					
+					
+					<div class="input-field col s3">
+						
+						<input data-length="50" class="uppercase" type="date" id="Data" placeholder="Insira a Data">	
+						<label for="Data">  </label>
+					</div>
+					
+					
+					<div class="input-field col s3">
+						
+						<input data-length="50" class="uppercase" type="text" id="Email" placeholder="Insira o Email">	
+						<label for="Email"> E-mail </label>
+					</div>
+					
+					<div class="input-field col s3">
+						
+						<input data-length="50" class="uppercase" type="text" id="TelefoneFixo" placeholder="Insira o Telefone Fixo">	
+						<label for="TelefoneFixo"> Telefone Fixo </label>
+					</div>
+					
+					
+					
+					<div class="input-field col s3">
+						<input data-length="50" class="uppercase" type="text" id="TelefoneCelular" placeholder="Insira o Telefone Celular">	
+						<label for="TelefoneCelular"> Celular </label>
+					</div>
+					
+					<div class="input-field col s3">
+						
+						<input data-length="50" class="uppercase" type="text" id="WhatsApp" placeholder="Insira o WhatsApp">	
+						<label for="WhatsApp"> WhatsApp </label>
+					</div>
+					
+					<div class="input-field col s3">
+						
+						<input data-length="50" class="uppercase" type="text" id="Obs" placeholder=" Obs " >	
+						<label for="Obs"> Obs </label>
+					</div>
+					
+										
+					<div class="file-field input-field col s3" onchange="trocaLogo()">
+						<div class="btn" >
+							<span>File</span>
+							<input type="file">
+						</div>
+						<div class="file-path-wrapper">
+							<input class="file-path validate" id="CaminhoLogo" type="text" >
+						</div>
+					</div>
+					
+					
+					
+					
+				
+					
+				</div>
+				<br>
+				
+				<div class="row">
+					
+					<div class="col s1">
+						<button class="waves-effect waves-light btn" onclick="novoCliente()"> 
+							<i class="material-icons ">note_add</i>
+						</button>
+					</div>
+					<div class="col s1">
+						<button class="waves-effect waves-light btn" onclick="atualizaCliente()"> 
+							<i class="material-icons ">create</i>
+							 
+						</button>
+					</div>
+					<div class="col s1">
+						<button class="waves-effect waves-light btn" onclick="excluiCliente()"> 
+							<i class="material-icons ">delete</i>
+							 
+						</button>
+					</div>
+				</div>
+							
+			</div>
+			
+			
+			
+			
+		     
+		
+		</div >
+		
+		<div class="col s9 boxformulario ">
+				<div class="col s12 ">
+					<h5 class="center-align"> Lista de Clientes </h5>
+					<div id="listaClientes"> 	 </div>
+				</div>
+			</div>
+		
+		
+		
+	<!-- deixa isso queto -->
+	<script src="../../js/jquery-3.3.1.js"></script>
+	<script src="../../js/materialize.js"></script>
+	
+	<script>
+		$(document).ready(function(){
+			$('select').formSelect();
+		
+		
+		
+		});	
+		
+		</script>
+	</BODY>
+</HTML>
+
+

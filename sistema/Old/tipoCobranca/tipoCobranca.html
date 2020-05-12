@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<HTML lang="pt-br">
+	<HEAD>
+		<meta charset=utf-8>
+		<title> ProFacul Sistemas para Comissões de Formatura </title>
+		
+		
+		<!--Import Google Icon Font-->
+        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!---->
+		<link rel="stylesheet" type="text/css" href="../../css/materialize.css">
+		<link rel="stylesheet" type="text/css" href="../../css/custom.css">
+		
+		<!--<link rel="stylesheet" type="text/css" href="Style.css">-->
+		<script type="text/javascript" src="../../js/codigo.js"></script>
+		<script type="text/javascript" src="codigo.js"></script>
+		
+	</HEAD>
+	<BODY onload="criarAbrirBanco()">
+		<div class="row" >
+		
+		
+			<div class="col s3 boxformulario">
+				<h5 class="center-align" > Cadastro e Pesquisa de Tipo de Cobrança </h5>
+				<div class="row" >
+					<div class="input-field col s12">
+						<i class="material-icons prefix">format_list_numbered</i>
+						<input disabled type="text" id="idTipoCobranca" placeholder="">	
+						<label for="idTipoCobranca"> Nº Cobrança </label>
+					</div>
+					
+					<div class="input-field col s12">
+						<i class="material-icons prefix">face</i>
+						<input data-length="50" class="uppercase" type="text" id="nomeTipoCobranca" placeholder="Insira o Nome da Cobrança">	
+						<label for="nomeTipoCobranca"> Tipo Cobrança </label>
+					</div>
+					
+					<div class="input-field col s12">
+						<i class="material-icons prefix">attach_money</i>
+						<input class="uppercase" type="text" id="valorPadrao" placeholder="Insira o Valor Padrão">	
+						<label for="valorPadrao"> Valor Padrão </label>
+					</div>
+					
+					
+				</div>
+				<br>
+				
+				<div class="row ">
+					<div class="col s4	">
+						<button class="waves-effect waves-light btn" onclick="novoTipoCobranca()"> 
+							<i class="material-icons ">note_add</i>
+						</button>
+					</div>
+					<div class="col s4">
+						<button class="waves-effect waves-light btn" onclick="atualizaTipoCobranca()"> 
+							<i class="material-icons ">create</i>
+							 
+						</button>
+					</div>
+					<div class="col s4">
+						<button class="waves-effect waves-light btn" onclick="excluiTipoCobranca()"> 
+							<i class="material-icons">delete</i>	
+						</button>
+					</div>
+				</div>
+			
+				
+			</div>
+			
+			<div class="col s9 boxformulario ">
+				<div class="col s12 ">
+					<h5 class="center-align"> Lista de Tipo de Cobrança </h5>
+					<div id="listaTipoCobranca"> 	 </div>
+				</div>
+			</div>
+			
+			
+		</div>
+		
+		
+		
+		
+		
+	<!-- deixa isso queto -->
+	<script src="../../js/jquery-3.2.1.js"></script>
+	<script src="../../js/materialize.js"></script>
+	</BODY>
+</HTML>
+
